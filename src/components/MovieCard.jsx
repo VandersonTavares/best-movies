@@ -1,5 +1,9 @@
 import { useState } from "react";
+
 import { Link } from "react-router-dom";
+
+import { AiFillStar } from "react-icons/ai";
+
 import Tilt from "react-parallax-tilt";
 
 const imageUrl = import.meta.env.VITE_IMG;
@@ -22,7 +26,10 @@ const MovieCard = ({ movie, showLink = true }) => {
           <h2 className="overflow-hidden text-ellipsis whitespace-nowrap">
             {movie.title}
           </h2>
-          <p className="text-[#777777]">{splitMovieDate[0]}</p>
+          <div className="flex justify-between">
+            <span className="text-[#777777]">{splitMovieDate[0]}</span>
+            <span className="text-[#777777] flex"> <AiFillStar className="mt-1 text-[#b8930c]"/> {movie.vote_average.toFixed(1)}</span>
+          </div>
         </div>
       </Tilt>
     </Link>
