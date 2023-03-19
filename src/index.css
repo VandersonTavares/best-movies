@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* sistema de conversao em base 10 */
+:root {
+  /* converte o valor padrao de 16 para 10 */
+  font-size: 62.5%; 
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* converte de volta a fonte para o valor padrao de 16px */
+  font-size: 1.6rem;
+  background-color: #000;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #b8930c;
+}

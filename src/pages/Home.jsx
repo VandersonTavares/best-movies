@@ -24,8 +24,8 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h2 className="title">Melhores Filmesssss:</h2>
-      <div className="movies-container">
+      <h2 className="title ml-3">Melhores Filmes:</h2>
+      <div className="movies-container flex flex-wrap justify-center content-center w-screen">
         {topMovies.length === 0 && <p>Carregando...</p>}
         {topMovies && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}        
       </div>
