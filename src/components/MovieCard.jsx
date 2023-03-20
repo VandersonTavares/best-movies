@@ -12,28 +12,28 @@ const MovieCard = ({ movie, imgSize, activeLink = true }) => {
   const splitMovieDate = movie.release_date.split("-");
 
   return (
-    <>
-      <Link to={`/movie/${movie.id}`}>
-        <div className={`movie-card m-3 rounded-md ${imgSize}`}>
-          <img
-            className="rounded-md"
-            src={imageUrl + movie.poster_path}
-            alt={movie.title}
-          />
-          <h2 className="overflow-hidden text-ellipsis whitespace-nowrap">
-            {movie.title}
-          </h2>
-          <div className="flex justify-between">
-            <span className="text-[#777777]">{splitMovieDate[0]}</span>
-            <span className="text-[#777777] flex">
-              {" "}
-              <AiFillStar className="mt-1 text-[#b8930c]" />{" "}
-              {movie.vote_average.toFixed(1)}
-            </span>
+    <div>
+        <Link to={`/movie/${movie.id}`}>
+          <div className={`movie-card m-3 rounded-md ${imgSize}`}>
+            <img
+              className="rounded-md"
+              src={imageUrl + movie.poster_path}
+              alt={movie.title}
+            />
+            <h2 className="overflow-hidden text-ellipsis whitespace-nowrap">
+              {movie.title}
+            </h2>
+            <div className="flex justify-between">
+              <span className="text-[#777777]">{splitMovieDate[0]}</span>
+              <span className="text-[#777777] flex">
+                {" "}
+                <AiFillStar className="mt-1 text-[#b8930c]" />{" "}
+                {movie.vote_average.toFixed(1)}
+              </span>
+            </div>
           </div>
-        </div>
-      </Link>
-    </>
+        </Link>
+    </div>
   );
 };
 

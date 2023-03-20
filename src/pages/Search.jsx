@@ -24,7 +24,7 @@ const Search = () => {
     axios
       .get(customSearchUrl)
       .then((response) => {
-        console.log(response.data.results);
+        // console.log(response.data.results);
         setMovies(response.data.results);
       })
       .catch((e) => {
